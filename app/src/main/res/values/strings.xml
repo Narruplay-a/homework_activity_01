@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Activities</string>
+    <string name="app_name">Homework_activity_01</string>
+    <string name="open_activity_b_button">Open activity B</string>
 </resources>
