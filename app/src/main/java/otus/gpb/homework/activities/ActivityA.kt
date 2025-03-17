@@ -3,6 +3,7 @@ package otus.gpb.homework.activities
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.CheckBox
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -19,9 +20,16 @@ class ActivityA : AppCompatActivity() {
             insets
         }
 
-        val buttonOne = findViewById<Button>(android.R.id.button2)
+        var checkBox = findViewById<CheckBox>(R.id.checkBox)
+        val buttonOne = findViewById<Button>(R.id.button2)
         buttonOne.setOnClickListener {
+            val intent = Intent(this, ActivityB::class.java)
 
+            if (checkBox.isActivated) {
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            }
+
+            startActivity(intent)
         }
     }
 }
