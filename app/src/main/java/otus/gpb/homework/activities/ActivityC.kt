@@ -22,7 +22,7 @@ class ActivityC : AppCompatActivity() {
         val buttonOne = findViewById<Button>(R.id.button3)
         buttonOne.setOnClickListener {
             val intent = Intent(this, ActivityA::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
             startActivity(intent)
         }
 
@@ -30,7 +30,6 @@ class ActivityC : AppCompatActivity() {
         buttonTwo.setOnClickListener {
             val intent = Intent(this, ActivityD::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-            finishAffinity()
             startActivity(intent)
         }
 

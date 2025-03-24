@@ -26,8 +26,7 @@
         <activity
             android:name=".ActivityA"
             android:exported="true"
-            android:taskAffinity="app.a"
-            android:launchMode="singleTask">
+            android:taskAffinity="app.a">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

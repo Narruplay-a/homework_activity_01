@@ -25,7 +25,7 @@ class ActivityA : AppCompatActivity() {
         buttonOne.setOnClickListener {
             val intent = Intent(this, ActivityB::class.java)
 
-            if (checkBox.isActivated) {
+            if (checkBox.isChecked) {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             }
 
