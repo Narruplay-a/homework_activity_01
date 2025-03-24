@@ -20,7 +20,7 @@ class ActivityA : AppCompatActivity() {
             insets
         }
 
-        var checkBox = findViewById<CheckBox>(R.id.checkBox)
+        val checkBox = findViewById<CheckBox>(R.id.checkBox)
         val buttonOne = findViewById<Button>(R.id.button2)
         buttonOne.setOnClickListener {
             val intent = Intent(this, ActivityB::class.java)
