@@ -35,7 +35,7 @@ class EditProfileActivity : AppCompatActivity() {
             ageTw.text = data.getStringExtra(AGE_KEY)
 
         } else {
-            Toast.makeText(this, "Вы не ввели всех данных", Toast.LENGTH_SHORT)
+            Toast.makeText(this, "Вы не ввели всех данных", Toast.LENGTH_LONG)
         }
     }
 
@@ -109,6 +109,7 @@ class EditProfileActivity : AppCompatActivity() {
     private fun populateImage(uri: Uri) {
         val bitmap = BitmapFactory.decodeStream(contentResolver.openInputStream(uri))
         imageView.setImageBitmap(bitmap)
+        imageUri = uri
     }
 
     private fun showImageSelectDialog() {
@@ -127,8 +128,7 @@ class EditProfileActivity : AppCompatActivity() {
                         .setPositiveButton(resources.getString(R.string.give_access)) { _, _ ->
                             permissionCamera.launch(Manifest.permission.CAMERA)
                         }
-                        .setNeutralButton(resources.getString(R.string.cancellation)) { _, _ ->
-                        }
+                        .setNeutralButton(resources.getString(R.string.cancellation)) { _, _ ->  }
                         .show()
                 }
             }

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.textfield.TextInputEditText
@@ -15,9 +16,9 @@ const val AGE_KEY = "age_key"
 
 class FillFormActivity : AppCompatActivity() {
     private lateinit var okButton: Button
-    private lateinit var nameTe: TextInputEditText
-    private lateinit var lastnameTe: TextInputEditText
-    private lateinit var ageTe: TextInputEditText
+    private lateinit var nameTe: AppCompatEditText
+    private lateinit var lastnameTe: AppCompatEditText
+    private lateinit var ageTe: AppCompatEditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,7 +54,9 @@ class FillFormActivity : AppCompatActivity() {
 
             setResult(RESULT_OK, intent)
         } else {
-            setResult(RESULT_CANCELED)
+            val intent = Intent()
+
+            setResult(RESULT_CANCELED, intent)
         }
 
         finish()
