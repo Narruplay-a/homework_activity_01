@@ -44,7 +44,7 @@ class EditProfileActivity : AppCompatActivity() {
     ) { granted ->
         when {
             granted -> {
-                imageView.setImageResource(R.drawable.cat)
+                imageView.setImageResource(R.drawable.i)
             }
 
             !shouldShowRequestPermissionRationale(Manifest.permission.CAMERA) -> {

@@ -12,4 +12,13 @@
     <string name="cancellation">Отмена</string>
     <string name="open_settings">Настройки</string>
     <string name="apply">Применить</string>
+    <string name="edit_profile_edit_button">Редактировать профиль</string>
+    <string name="edit_profile_name_tw">Имя</string>
+    <string name="edit_profile_lastname_tw">Фамилия</string>
+    <string name="edit_profile_age_tw">Возраст</string>
+    <string name="edit_profile_title">Профиль</string>
+    <string name="fill_form_ok_button">Ok</string>
+    <string name="fill_form_age_tw">Age</string>
+    <string name="fill_form_lastname_tw">Lastname</string>
+    <string name="fill_form_name_tw">Name</string>
 </resources>
